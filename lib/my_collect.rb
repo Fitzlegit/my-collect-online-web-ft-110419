@@ -2,15 +2,11 @@ require 'pry'
 
 def my_collect(array)
   i = 0
-  collection = []
+  collect = []
   while i < array.length
-    collection << yield(array[i])
+    collect << yield(array[i])
     i += 1
   end
   array
 end
 
-collection = ['ruby', 'javascript', 'python', 'objective-c']
-my_collect(collection) do |lang|
-  lang.upcase
-end
